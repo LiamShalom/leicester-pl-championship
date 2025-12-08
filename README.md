@@ -51,11 +51,7 @@ In the 2015-16 season, Leicester City defied 5,000-to-1 odds to claim the Premie
 
 3. Start a local server
    ```bash
-   # Using Python
-   cd public
-   python -m http.server 8000
-   
-   # Or using Node.js (install serve globally first)
+   # Using Node.js (install serve globally first)
    npx serve public
    ```
 
@@ -108,18 +104,12 @@ leicester-pl-championship/
 ## 👥 Authors
 
 - **Liam Shalom** - [GitHub](https://github.com/LiamShalom)
-- **Solden Stoll**
+- **Solden Stoll** - [GitHub](https://github.com/soldenstoll)
 
 ## 🙏 Acknowledgments
 
 - Created as part of CSE 442 - Data Visualization at the University of Washington
 - AI tools (GitHub Copilot, Claude) were used to assist with styling and data cleaning
 - Leicester City FC for the incredible 2015-16 season that inspired this project
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
 
 *"Dilly Ding, Dilly Dong"* - Claudio Ranieri
