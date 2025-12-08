@@ -1,11 +1,6 @@
 # Leicester City Premier League Championship - Interactive Data Visualization
 
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://liamshalom.github.io/leicester-pl-championship/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 An interactive data visualization exploring how Leicester City achieved one of the greatest underdog stories in sports history by winning the 2015-16 Premier League title.
-
-![Leicester City Trophy](public/images/pl_trophy.png)
 
 ## 🏆 About The Project
 
