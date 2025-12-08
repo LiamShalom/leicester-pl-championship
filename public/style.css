@@ -1,0 +1,874 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  color: #222;
+  overflow-x: hidden;
+}
+
+.panel {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  position: relative;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.panel-content {
+  max-width: 1400px;
+  width: 100%;
+  text-align: center;
+}
+
+#title-panel {
+  background: #0053A0;
+  color: white;
+}
+
+#title-panel h1 {
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+#title-panel h5 {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  opacity: 0.9;
+}
+
+.scroll-indicator {
+  opacity: 0.8;
+  margin-top: 3rem;
+}
+
+#intro-panel {
+  background-color: #f8f9fa;
+}
+
+#intro-panel h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #333;
+}
+
+#intro-panel .lead {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.8;
+  color: #555;
+}
+
+#scatterplot-panel {
+  background: #ffffff;
+}
+
+#previous-season-panel {
+  background-color: #ffffff;
+}
+
+#possession-panel {
+  background: #f8f9fa;
+}
+
+#possession-panel h2 {
+  text-align: left;
+}
+
+#possession-panel p {
+  text-align: left;
+}
+
+#spin-wheel-panel {
+  background: #1a202c;
+  color: #f7fafc;
+}
+
+#spin-wheel-panel h2 {
+  text-align: left;
+  font-size: clamp(4rem, 4vw, 3rem);
+  color: #f7fafc;
+}
+
+#spin-wheel-panel p {
+  text-align: left;
+  color: #e2e8f0;
+}
+
+#transition-panel {
+  background-color: #0053A0;
+  color: white;
+}
+
+#transition-panel h2 {
+  color: white;
+}
+
+#transition-panel .lead {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#this-season-panel {
+  background-color: #ffffff;
+}
+
+#winning-goal-panel {
+  background-color: #0053A0;
+  color: white;
+}
+
+#winning-goal-panel h2 {
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#winning-goal-panel p {
+  color: white;
+}
+
+#manager-panel {
+  background: #e2e8f0
+}
+
+#sources-panel {
+  background-color: #1a202c;
+  color: #e2e8f0;
+}
+
+.sources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.source-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.source-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.source-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.source-url {
+  color: #a0aec0;
+  font-family: monospace;
+  font-size: 0.8rem;
+}
+
+.footer-info {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+}
+
+h1 {
+  font-family: "DM Serif Display", serif;
+  font-size: 3.5rem;
+  letter-spacing: 0.5px;
+}
+
+h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+#scatterplot {
+  min-height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#possession {
+  min-height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#starting-xi-panel {
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  position: relative;
+  background: #348C31
+}
+
+#starting-xi {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#starting-xi svg {
+  width: 100%;
+  height: 100%;
+}
+
+#vardy-goals {
+  position: relative;
+}
+
+#vardy-goals-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: #333;
+  color: white;
+}
+
+#vardy-goals-panel h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: 3rem;
+  color: white;
+  margin: 0;
+}
+
+#mahrez-stats-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: #1a1a2e;
+  color: white;
+}
+
+#mahrez-stats-panel h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: 2.5rem;
+  color: white;
+  margin: 0;
+}
+
+#mahrez-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-box {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  min-height: 92%;
+  z-index: 10;
+}
+
+#player-info {
+  padding: 20px;
+  text-align: left;
+}
+
+#player-name {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+#player-meta {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a5568;
+}
+
+#player-photo {
+  max-width: 100%;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+  display: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+.tooltip {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px 10px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 1000;
+}
+
+/* D3 Soccer custom theme */
+.custom-theme {
+  --color: #43FCD5;
+  --color-meta: #f3efef;
+  --pitch-line-color: white;
+  --pitch-shade-color: gold;
+}
+
+/* Spin Wheel */
+#spin-wheel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.wheel-title {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.75rem;
+  color: #2d3748;
+  margin: 0;
+}
+
+.spin-button {
+  background: #0053A0;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 83, 160, 0.3);
+}
+
+.spin-button:hover:not(:disabled) {
+  background: #003d75;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 83, 160, 0.4);
+}
+
+.spin-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.spin-result {
+  font-size: 1.5rem;
+  font-weight: 600;
+  min-height: 2rem;
+  text-align: center;
+}
+
+#game-fixtures-panel {
+  background: linear-gradient(to bottom, #e2e8f0 0%, #cbd5e0 100%);
+}
+
+.flip-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.flip-card {
+  flex: 0 0 calc(9% - 1rem);
+  min-width: 100px;
+  height: 150px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.flip-card-front {
+  background: white;
+  color: #2d3748;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  color: white;
+}
+
+.flip-card-back.W {
+  background: #2f855a;
+}
+
+.flip-card-back.L {
+  background: #c53030;
+}
+
+.flip-card-back.D {
+  background: #4a5568;
+}
+
+.timespan {
+  font-size: 11px
+}
+
+.trophy-text-rear {
+  font-size: 11px
+}
+
+/* Result border for front of card */
+.flip-card.W .flip-card-front {
+  border: 4px solid #2f855a;
+}
+
+.flip-card.L .flip-card-front {
+  border: 4px solid #c53030;
+}
+
+.flip-card.D .flip-card-front {
+  border: 4px solid #4a5568;
+}
+
+.home-away {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #718096;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.opponent-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin: 0.5rem 0;
+}
+
+.opponent-name {
+  font-family: "DM Serif Display", serif;
+  font-size: 0.65rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.result-label {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.score {
+  font-family: "DM Serif Display", serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.fixtures-info-box {
+  position: absolute;
+  bottom: 13vh;
+  right: 4vw;
+}
+
+.fixtures-info-box h3 {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+.fixtures-info-box p {
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+}
+
+.manager-quote {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.15rem;
+  color: #4a5568;
+  border-left: 4px solid #0053A0;
+  padding-left: 1.25rem;
+  margin: 1.25rem 0;
+  font-style: italic;
+  background: rgba(0, 83, 160, 0.05);
+  padding: 1.25rem;
+  border-radius: 0 8px 8px 0;
+  line-height: 1.7;
+}
+
+.ranieri-photo {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Timeline Styles */
+.timeline-container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: 1rem 1rem 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.timeline-track {
+  display: flex;
+  align-items: flex-start;
+  min-width: max-content;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-width: 140px;
+}
+
+.timeline-node {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 3px solid #cbd5e0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.timeline-node.success {
+  border-color: #0053A0;
+}
+
+.timeline-node.neutral {
+  border-color: #cbd5e0;
+}
+
+.timeline-logo {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  display: block;
+}
+
+.timeline-node.neutral .timeline-logo {
+  filter: none;
+}
+
+.timeline-card {
+  margin-top: 0.75rem;
+  background: white;
+  border-radius: 10px;
+  padding: 0.9rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  min-width: 130px;
+  max-width: 140px;
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.timeline-card.success {
+  border-color: #0053A0;
+}
+
+.timeline-timespan {
+  font-size: 0.65rem;
+  color: #718096;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-bottom: 0.35rem;
+}
+
+.timeline-team-name {
+  font-family: "DM Serif Display", serif;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.timeline-record,
+.timeline-ppg {
+  font-size: 0.75rem;
+  color: #4a5568;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-trophies {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.timeline-trophy-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.timeline-trophy-text {
+  font-size: 0.7rem;
+  color: #0053A0;
+  font-weight: 600;
+  flex: 1;
+  line-height: 1.2;
+}
+
+.timeline-no-trophies {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.7rem;
+  color: #a0aec0;
+  font-style: italic;
+}
+
+.team-line {
+  fill: none;
+  stroke-width: 2px;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.perma-highlight {
+  opacity: 1;
+  stroke-width: 3px;
+}
+
+.team-line.highlight {
+  opacity: 1;
+  stroke-width: 3px;
+}
+
+.grid line {
+  stroke: #ddd;
+  stroke-opacity: 1;
+}
+
+#playButton {
+  margin-bottom: 6px;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.previous-season-play-button {
+  background: #0053A0;
+  color: white;
+  border: none;
+  padding: 1rem 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 83, 160, 0.3);
+  min-width: 180px;
+}
+
+.previous-season-play-button:hover {
+  background: #003d75;
+  box-shadow: 0 6px 16px rgba(0, 83, 160, 0.4);
+}
+
+.relegation-zone {
+  fill: red;
+  opacity: 0.75;
+}
+
+.relegation-zone-div {
+  background-color: red;
+  opacity: 0.75;
+}
+
+.champions-league-zone {
+  fill: rgb(0, 13, 255);
+  opacity: 0.75;
+}
+
+.champions-league-zone-div {
+  background-color: rgb(0, 13, 255);
+  opacity: 0.75;
+}
+
+.europa-league-zone {
+  fill: rgb(255, 165, 30);
+  opacity: 0.75;
+}
+
+.europa-league-zone-div {
+background-color: rgb(255, 165, 30);
+  opacity: 0.75;
+}
+
+.default-zone {
+  fill: transparent;
+}
+
+.celebration-image {
+  width: 600px;
+  height: 400px;
+}
+
+.legend-team {
+  object-fit: contain;
+}
+
+@media (max-width: 1200px) {
+  .flip-card {
+    flex: 0 0 calc(12.5% - 1rem);
+  }
+}
+
+@media (max-width: 992px) {
+  .flip-card {
+    flex: 0 0 calc(16.66% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .flip-card {
+    flex: 0 0 calc(20% - 1rem);
+    height: 140px;
+  }
+
+  .opponent-name {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .flip-card {
+    flex: 0 0 calc(25% - 1rem);
+  }
+
+  .opponent-logo {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .panel {
+    padding: 3rem 1rem;
+  }
+}
+
+.control-btn {
+  background: #0053A0;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 60px;
+  box-shadow: 0 2px 8px rgba(0, 83, 160, 0.3);
+}
+
+.control-btn:hover:not(:disabled) {
+  background: #003d75;
+  box-shadow: 0 4px 12px rgba(0, 83, 160, 0.4);
+}
+
+.control-btn:active {
+  transform: translateY(0);
+}
+
+.control-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.animation-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.kante-panel-text {
+  text-align: left;
+}
+
+#kante-panel h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  color: #333;
+}
+
+.goal-animation-button-inactive {
+  opacity: 0.5;
+}

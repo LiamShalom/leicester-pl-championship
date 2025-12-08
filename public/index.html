@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Final Project</title>
+
+  <!------------------------------------------------------------>
+  <!-- You are free to use, change, and remix this template however you want! -->
+  <!-- This is a basic setup to make tool imports handy. -->
+  <!-- Adapt it to match your own visualization story and design. -->
+  <!-- so your project doesn’t look exactly the same as everyone else's :) -->
+  <!------------------------------------------------------------>
+
+  <!-- Bootstrap Framework: if you want to make HTML handling simpler -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- D3 Soccer CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/d3-soccer@1.1.2/dist/d3-soccer.css" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Font: DM Serif Display + Source Sans 3 (an example set of fonts that go together) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Loading Vega, Vega-Lite, Vega-Embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+  <!-- Loading D3 -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- Loading Vanilla Tilt for trophy effect -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+  <!-- Loading D3 Soccer for soccer pitch drawing -->
+  <link rel='stylesheet' href='https://unpkg.com/d3-soccer@0.2.0/dist/d3-soccer.css' />
+  <script type="text/javascript" src="https://unpkg.com/d3-soccer@0.2.0/dist/d3-soccer.js"></script>
+  <script type="text/javascript">
+    const pitch = d3.pitch();
+    pitch.height(window.innerHeight);
+
+    const attackingThird = d3.pitch();
+    attackingThird
+      .height(window.innerHeight / 1.8)
+      .clip([[50, 15], [110, 55]]);
+
+  </script>
+
+
+</head>
+
+<body>
+  <!-- Title Panel -->
+  <section class="panel" id="title-panel">
+    <div class="panel-content">
+      <h1 class="display-1">How Leicester City Won the Premier League</h1>
+      <h5 class="mt-4">Liam Shalom, Solden Stoll</h5>
+      <div class="scroll-indicator mt-5">
+        <p>Scroll to explore ↓</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction Panel -->
+  <section class="panel" id="intro-panel">
+    <div class="panel-content">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-6">
+            <h2 class="mb-4">The Greatest Underdog Story</h2>
+            <p class="lead">
+              In the 2015-16 season, Leicester City defied all odds to claim the Premier League title, completing
+              one of the most remarkable achievements in sports history. This visualization explores the key factors
+              behind their miraculous triumph. To set the scene, we need to look at how Leicester got here in the
+              first place.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img src="images/pl_trophy.png" class="trophy" alt="Premier League Trophy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Previous Season Panel -->
+  <section class="panel" id="previous-season-panel">
+    <div class="panel-content">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+            <h2 class="mb-3">Escaping Relegation in 2014-15</h2>
+            <p class="mb-3">
+              After earning promotion to the Premier League in 2013/14, Leicester were hoping to be a
+              part of the roughly 50% of promoted teams that avoid relegation the following season.
+              However, after 29 matches, they found themselves with only 19 points, putting them
+              in last place. With 9 games to go, they needed a miracle to stay in the Premier League,
+              and that is what they got. They avoided relegation by winning 7 out of their last 9
+              matches in what some have called the craziest escape from relegation in Premier League
+              History. See how they did it below.
+            </p>
+            <div class="animation-controls mb-2">
+              <button id="previous-season-step-back" class="control-btn">◀</button>
+              <button id="previous-season-play-button" class="previous-season-play-button">Play</button>
+              <button id="previous-season-step-forward" class="control-btn">▶</button>
+            </div>
+            <svg id="previous-season-animated-table" width="800" height="400"></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manager Panel -->
+  <section class="panel" id="manager-panel">
+    <div class="panel-content">
+      <div class="container">
+        <div class="row justify-content-center mb-2">
+          <div class="col-12 col-lg-10">
+            <h2 class="mb-2">A "New" Manager</h2>
+            <p class="lead mb-2">
+              Following a miraculous escape from relegation, Leicester City made a decision that shocked the football
+              world, sacking Nigel Pearson and appointing Claudio Ranieri as their new manager.
+            </p>
+            <div class="row align-items-center mb-2">
+              <div class="col-md-8 text-start">
+                <p class="mb-2">
+                  Known as "The Tinkerman" for his constant tactical changes, Ranieri was seen by many as a relic of the
+                  past. His resume spanned 29 years and 13 clubs, yet it lacked a single top-flight league title. The
+                  media verdict was brutal. Journalist Marcus Christianson famously wrote:
+                </p>
+                <blockquote class="manager-quote">
+                  "If Leicester wanted someone nice, they've got him. If they wanted someone to keep them in the Premier
+                  League, they may have got the wrong guy."
+                </blockquote>
+                <p class="mb-0">
+                  Explore his managerial history below to see why he was written off and why his triumph with Leicester
+                  was so unexpected.
+                </p>
+              </div>
+              <div class="col-md-4">
+                <img src="images/claudio-ranieri.jpg" class="ranieri-photo img-fluid rounded shadow"
+                  alt="Claudio Ranieri">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div id="ranieri-teams"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scatterplot Panel -->
+  <section class="panel" id="scatterplot-panel">
+    <div class="panel-content">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+            <h2 class="mb-4">Squad Value vs Final Position (2010–2020)</h2>
+            <p class="mb-4">
+              To top it all off, Leicester City entered the 2015–16 Premier League season with
+              a squad valued at only £66.7 million, one of the lowest in the league and a
+              fraction of the budgets of England’s traditional giants. Many of their
+              key players were considered cheap and overlooked, including Riyad Mahrez,
+              signed for just £400,000 from Le Havre, and Jamie Vardy, purchased from
+              non-league Fleetwood Town for £1 million. N'Golo Kanté, a relatively unknown
+              midfielder from Caen, cost just £5.6 million yet went on to dominate the league
+              in tackles and interceptions.
+            </p>
+            <div id="scatterplot"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spin the Wheel Panel -->
+  <section class="panel" id="spin-wheel-panel">
+    <div class="panel-content">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6">
+            <h2 class="mb-4">Odds of Winning the Premier League</h2>
+            <p class="mb-4">
+              With all of this in mind, UK Bookmakers gave Leicester 5,000 to 1 odds of winning
+              the title. To put that into perspective, these were the same odds Kim
+              Kardashian had of becoming President of the USA in 2020.
+              However, economists at Oxera built a statistical model based on wages
+              and prior finish position and estimated Leicester's true probability
+              of winning the league to be around 20,000 to 1.
+            </p>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div id="spin-wheel"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Segue Panel -->
+  <section class="panel" id="transition-panel">
+    <div class="panel-content">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-6">
+            <h2 class="mb-4">So How Did Leicester Defy All Odds?</h2>
+            <p class="lead">
+              With seemingly everything pointing to a poor season for Leicester, a very natural question
+              is how. After all, the Premier League consists of 38 matches making winning the title require
+              far more than just a few good games. In the end, it came down to ingenious tactics, and
+              two standout individuals, all of which we explore below.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img src="images/winning-celebration.png" class="celebration-image" alt="Winning Celebrations">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Starting XI Panel -->
+  <section class="panel" id="starting-xi-panel">
+    <div id="starting-xi"></div>
+    <div class="info-box">
+      <h2 class="mb-4">Leicester City 2015-16 Starting XI</h2>
+      <p class="mb-4">Hover over players to learn more about the heroes who made history</p>
+      <div id="player-info">
+        <h4 id="player-name">Select a player</h4>
+        <p id="player-meta"></p>
+      </div>
+      <img id="player-photo" alt="Player photo" />
+    </div>
+  </section>
+
+  <!-- Posession Stats Panel -->
+  <section class="panel" id="possession-panel">
+    <div class="panel-content">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6 order-lg-1">
+            <h2 class="mb-4">Possession Stats</h2>
+            <p class="mb-4">
+              In an era where possession was seen as the law, Leicester City broke every rule. They won the league with
+              an average possession of just 42.6%, the lowest of any champion in Premier League history. Instead of
+              controlling the ball, they controlled the space, inviting pressure before launching devastating
+              counter-attacks that caught opponents off guard.
+            </p>
+          </div>
+          <div class="col-12 col-lg-6 order-lg-2">
+            <div id="possession"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Counterattack Panel -->
+  <section class="panel" id="counterattack-panel">
+    <div class="panel-content">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6">
+            <h2 class="mb-4">The Art of the Counter-Attack</h2>
+            <p class="mb-3">
+              So how did this low-possession approach actually work? Leicester's counter-attacking strategy was
+              devastatingly
+              simple: stay compact with 8-9 players behind the ball, win possession deep in their own third, then
+              explode
+              forward with blistering pace.
+            </p>
+            <p class="mb-3">
+              Take Vardy's goal against Liverpool (right). Leicester win the ball in their own box under pressure.
+              Within
+              seconds, Vardy is racing through on goal. No build-up, no sideways passes—just direct, ruthless
+              counter-attacking
+              that turned defense into attack in an instant.
+            </p>
+            <p class="mb-0">
+              With Vardy's pace, Mahrez's creativity, and N'Golo Kanté winning the ball back relentlessly, Leicester
+              turned
+              their opponents' attacks into their greatest weapon. Teams dominated possession but left themselves
+              exposed to
+              lightning-fast transitions that won Leicester the title.
+            </p>
+          </div>
+          <div class="col-12 col-lg-6">
+            <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/cIEHfaodkMw?si=g4EOl5oF4OM6a7sx&amp;clip=UgkxpRO5U0SOTDIaDv6luGKb2vwTMEAvvnYr&amp;clipt=EAAYtO4B"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p class="text-muted mt-2 small text-center">
+              <em>Vardy vs Liverpool: From their own box to goal in seconds</em>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vardy Goals Panel -->
+  <section class="panel" id="vardy-goals-panel">
+    <div class="panel-content">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6 order-lg-1">
+            <div id="goal-frame-viz" class="mt-4"></div>
+            <div id="vardy-goals" class="mt-4"></div>
+            
+          </div>
+          <div class="col-12 col-lg-6 order-lg-2">
+            <h2 class="mb-4 text-white text-start">Jamie Vardy's Incredible Season</h2>
+            <p class="mb-4 text-white text-start">
+              The spearhead of this counter-attacking machine was Jamie Vardy. Rising from non-league football to the
+              summit of the Premier League, Vardy scored 24 goals, including a record-breaking run of scoring in 11
+              consecutive matches. His relentless work rate and blistering pace made him the perfect outlet for
+              Leicester's direct style of play.
+            </p>
+            <img src="images/jamie_vardy_trophy.jpg" class="img-fluid rounded shadow-lg mt-4"
+              alt="Jamie Vardy with trophy" style="max-width: 90%; height: auto;" />
+
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kante Panel -->
+  <section class="panel" id="kante-panel">
+    <div class="panel-content">
+      <div class="container">
+        <div class="row align-items-center">
+          <h2 class="mb-4 mt-[-2]">70% of the World is Covered by Water, the Rest is Covered by N'Golo Kante</h2>
+          <div class="col-12 col-lg-6">
+            <p class="kante-panel-text mb-0">
+              Leicester's counter-attacking approach required a strong midfield presence to withstand pressure and
+              quickly transition to attack. N'Golo Kanté provided exactly that. In 2015/16, he logged 175 tackles
+              and 156 interceptions—both single-season Premier League records that still stand today. His relentless
+              running made him appear to be everywhere on the pitch.
+              His future teammate Eden Hazard even said,
+            </p>
+            <blockquote class="manager-quote mb-2 mt-2">
+              "I think sometimes when I'm on the pitch I see him twice. One on the left, one on the right.
+              I sometimes think I am playing with twins."
+            </blockquote>
+            <p class="kante-panel-text mb-0">
+              Beyond winning the ball, Kanté could carry it
+              forward, beat defenders, and turn defensive actions into instant attacks. Two examples showcasing these
+              are shown to the right. Hover over each element for more information.
+            </p>
+            <img src="images/kante_tackle.webp" class="img-fluid rounded shadow-lg mt-4" alt="Jamie Vardy with trophy"
+              style="max-width: 90%; height: 280px;" />
+          </div>
+          <div class="col-12 col-lg-6">
+            <div style="display: flex; align-items: center; justify-content: center; min-height: 20px;">
+              <div id="kante-carries-animation-1-title"></div>
+            </div>
+            <div id="kante-carries-animation-1"></div>
+            <div></div>
+            <div style="display: flex; align-items: center; justify-content: center; min-height: 20px;">
+              <div id="kante-carries-animation-2-title"></div>
+            </div>
+            <div id="kante-carries-animation-2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mahrez Stats Panel -->
+  <section class="panel" id="mahrez-stats-panel">
+    <div class="panel-content">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6">
+            <h2 class="mb-4 text-white text-start">Riyad Mahrez: The Magician</h2>
+            <p class="mb-4 text-white text-start">
+              Signed for just £400,000 from French second division club Le Havre, Riyad Mahrez 
+              became one of the most electrifying players in the Premier League. His dazzling 
+              dribbling, unique playmaking ability, and clinical finishing earned him the PFA Players' 
+              Player of the Year award, the highest individual honor voted by his peers.
+            </p>
+            <img src="images/riyad-mahrez.avif" class="img-fluid rounded shadow-lg mt-2" style="max-width: 85%; height: auto;" />
+          </div>
+          <div class="col-12 col-lg-6">
+            <div id="mahrez-stats"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Game Fixtures Panel -->
+  <section class="panel" id="game-fixtures-panel">
+    <div id="game-fixtures"></div>
+  </section>
+
+  <!-- This Season Panel -->
+  <section class="panel" id="this-season-panel">
+    <div class="panel-content">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+            <h2 class="mb-3">See How This Looked in the Table</h2>
+            <div class="animation-controls mb-2">
+              <button id="this-season-step-back" class="control-btn">◀</button>
+              <button id="this-season-play-button" class="previous-season-play-button">Play</button>
+              <button id="this-season-step-forward" class="control-btn">▶</button>
+            </div>
+            <svg id="this-season-animated-table" width="1000" height="480"></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Winning Goal Panel -->
+  <section class="panel" id="winning-goal-panel">
+    <div class="panel-content">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+            <h2 class="mb-4">The Goal That Won it All</h2>
+            <p class="mb-4">
+              Going into gameweek 36, Leicester had 76 points and second place Tottenham had 69. If Leicester won, they
+              would be
+              at least 7 points ahead of Tottenham at the end of the week, securing the title. However, Leicester drew
+              1-1 to Manchester
+              United on Sunday May 1st. Tottenham went to Stamford Bridge to face Chelsea on the 2nd of May, knowing
+              that anything but
+              a win would secure the title for Leicester, but a win would keep them in the race. Going into the 83rd
+              minute, Tottenham
+              was up 2-1. That was until Eden Hazard stepped up and scored. The game finished 2-2, which was enough to
+              crown Leicester
+              as champions.
+            </p>
+            <iframe width="850" height="480" src="https://www.youtube.com/embed/OIUkFUSzP98"
+              title="Leicester City Fan/Player Reaction To Eden Hazard Goal" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sources Panel -->
+  <section class="panel" id="sources-panel">
+    <div class="panel-content">
+      <div class="container">
+        <h2 class="mb-5 text-white">Sources</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="sources-list">
+              <a href="https://github.com/statsbomb/open-data" target="_blank" class="source-item">
+                <span class="source-name">StatsBomb</span>
+                <span class="source-url">github.com/statsbomb/open-data</span>
+              </a>
+              <a href="https://www.premierleague.com/stats" target="_blank" class="source-item">
+                <span class="source-name">Premier League Data</span>
+                <span class="source-url">premierleague.com/stats</span>
+              </a>
+              <a href="https://www.transfermarkt.com/" target="_blank" class="source-item">
+                <span class="source-name">Transfermarkt</span>
+                <span class="source-url">transfermarkt.com</span>
+              </a>
+              <a href="https://observablehq.com/@probberechts/d3-soccer" target="_blank" class="source-item">
+                <span class="source-name">D3-Soccer</span>
+                <span class="source-url">https://observablehq.com/@probberechts/d3-soccer</span>
+              </a>
+              <a href="https://observablehq.com/@probberechts/d3-soccer" target="_blank" class="source-item">
+                <span class="source-name">FBREF</span>
+                <span class="source-url">https://fbref.com/en/players/b9fbae28/NGolo-Kante</span>
+              </a>
+              <a href="https://www.premierleague.com/en/tables?competition=8&season=2015&round=L_1&matchweek=-1&ha=-1"
+                target="_blank" class="source-item">
+                <span class="source-name">Premier League</span>
+                <span class="source-url">https://www.premierleague.com/en/tables</span>
+              </a>
+              <a href="https://www.youtube.com/watch?v=6r1Aw3vB8dY&t=123s" target="_blank" class="source-item">
+                <span class="source-name">How A Team Worth £28M Won A Premier League..</span>
+                <span class="source-url">https://www.youtube.com/watch?v=6r1Aw3vB8dY&t=123s</span>
+              </a>
+              <a href="https://www.fut.gg/playstyles/" target="_blank" class="source-item">
+                <span class="source-name">fut.gg</span>
+                <span class="source-url">https://www.fut.gg/playstyles/</span>
+              </a>
+            </div>
+            <p class="text-white-50 mt-4 text-center">
+              <em>Styling and design assistance provided by Claude (Anthropic)</em>
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-info mt-5">
+          <p class="mb-1">CSE 442 Data Visualization</p>
+          <p class="text-white-50">University of Washington</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+<script src="js/scatterplot.js"></script>
+<script src="js/spin-wheel.js"></script>
+<script src="js/starting-xi.js"></script>
+<script src="js/game-fixtures.js"></script>
+<script src="js/possession.js"></script>
+<script src="js/vardy-goals.js"></script>
+<script src="js/goal-frame.js"></script>
+<script src="js/mahrez-stats.js"></script>
+
+<script src="js/ranieri-stats.js"></script>
+<script src="js/animated-table-2014.js"></script>
+<script src="js/animated-table-2015.js"></script>
+<script src="js/kante.js"></script>
+
+</html>

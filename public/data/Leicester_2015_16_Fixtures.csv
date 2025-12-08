@@ -1,0 +1,39 @@
+Match,Date,Time,Home/Away,Position,Opponent,Attendance,Score,Logo
+1,08/08/15,3:00 PM,H,(1.),Sunderland AFC,32.242,4:2,images/team_logos/england_sunderland.svg
+2,15/08/15,3:00 PM,A,(2.),West Ham United,34.857,1:2,images/team_logos/england_west-ham.svg
+3,22/08/15,3:00 PM,H,(2.),Tottenham Hotspur,31.971,1:1,images/team_logos/england_tottenham.svg
+4,29/08/15,3:00 PM,A,(2.),AFC Bournemouth,11.155,1:1,images/team_logos/england_bournemouth.svg
+5,13/09/15,4:00 PM,H,(3.),Aston Villa,31.733,3:2,images/team_logos/england_aston-villa.svg
+6,19/09/15,3:00 PM,A,(2.),Stoke City,27.642,2:2,images/team_logos/england_stoke-city.svg
+7,26/09/15,3:00 PM,H,(4.),Arsenal FC,32.047,2:5,images/team_logos/england_arsenal.svg
+8,03/10/15,3:00 PM,A,(8.),Norwich City,27.067,1:2,images/team_logos/england_norwich-city.svg
+9,17/10/15,3:00 PM,A,(5.),Southampton FC,30.966,2:2,images/team_logos/england_southampton.svg
+10,24/10/15,3:00 PM,H,(5.),Crystal Palace,31.752,1:0,images/team_logos/england_crystal-palace.svg
+11,31/10/15,3:00 PM,A,(5.),West Bromwich Albion,24.15,2:3,images/team_logos/england_west-bromwich-albion.svg
+12,07/11/15,3:00 PM,H,(3.),Watford FC,32.029,2:1,images/team_logos/england_watford.svg
+13,21/11/15,3:00 PM,A,(3.),Newcastle United,50.151,0:3,images/team_logos/england_newcastle.svg
+14,28/11/15,5:30 PM,H,(1.),Manchester United,32.115,1:1,images/team_logos/england_manchester-united.svg
+15,05/12/15,3:00 PM,A,(2.),Swansea City,20.836,0:3,images/team_logos/england_swansea-city.svg
+16,14/12/15,8:00 PM,H,(1.),Chelsea FC,32.054,2:1,images/team_logos/england_chelsea.svg
+17,19/12/15,3:00 PM,A,(1.),Everton FC,39.57,2:3,images/team_logos/england_everton.svg
+18,26/12/15,3:00 PM,A,(1.),Liverpool FC,44.123,1:0,images/team_logos/england_liverpool.svg
+19,29/12/15,7:45 PM,H,(1.),Manchester City,32.072,0:0,images/team_logos/england_manchester-city--1997-2016.svg
+20,02/01/16,3:00 PM,H,(2.),AFC Bournemouth,32.006,0:0,images/team_logos/england_bournemouth.svg
+21,13/01/16,8:00 PM,A,(2.),Tottenham Hotspur,35.85,0:1,images/team_logos/england_tottenham.svg
+22,16/01/16,5:30 PM,A,(2.),Aston Villa,32.763,1:1,images/team_logos/england_aston-villa.svg
+23,23/01/16,3:00 PM,H,(2.),Stoke City,32.018,3:0,images/team_logos/england_stoke-city.svg
+24,02/02/16,7:45 PM,H,(1.),Liverpool FC,32.121,2:0,images/team_logos/england_liverpool.svg
+25,06/02/16,12:45 PM,A,(1.),Manchester City,54.693,1:3,images/team_logos/england_manchester-city--1997-2016.svg
+26,14/02/16,12:00 PM,A,(1.),Arsenal FC,60.009,2:1,images/team_logos/england_arsenal.svg
+27,27/02/16,3:00 PM,H,(1.),Norwich City,32.114,1:0,images/team_logos/england_norwich-city.svg
+28,01/03/16,7:45 PM,H,(1.),West Bromwich Albion,32.018,2:2,images/team_logos/england_west-bromwich-albion.svg
+29,05/03/16,5:30 PM,A,(1.),Watford FC,20.884,0:1,images/team_logos/england_watford.svg
+30,14/03/16,8:00 PM,H,(1.),Newcastle United,31.824,1:0,images/team_logos/england_newcastle.svg
+31,19/03/16,3:00 PM,A,(1.),Crystal Palace,25.041,0:1,images/team_logos/england_crystal-palace.svg
+32,03/04/16,1:30 PM,H,(1.),Southampton FC,32.071,1:0,images/team_logos/england_southampton.svg
+33,10/04/16,1:30 PM,A,(1.),Sunderland AFC,46.531,0:2,images/team_logos/england_sunderland.svg
+34,17/04/16,1:30 PM,H,(1.),West Ham United,32.104,2:2,images/team_logos/england_west-ham.svg
+35,24/04/16,4:15 PM,H,(1.),Swansea City,31.962,4:0,images/team_logos/england_swansea-city.svg
+36,01/05/16,2:05 PM,A,(1.),Manchester United,75.275,1:1,images/team_logos/england_manchester-united.svg
+37,07/05/16,5:30 PM,H,(1.),Everton FC,32.14,3:1,images/team_logos/england_everton.svg
+38,15/05/16,3:00 PM,A,(1.),Chelsea FC,41.494,1:1,images/team_logos/england_chelsea.svg

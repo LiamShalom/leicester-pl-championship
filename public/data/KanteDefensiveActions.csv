@@ -1,0 +1,275 @@
+match_id,minute,second,action,x,y,outcome
+3754341,4,11,Tackle,45.3,57.6,Success In Play
+3754341,12,6,Tackle,79.0,45.7,Lost In Play
+3754341,19,36,Tackle,49.4,64.2,Success In Play
+3754341,31,23,Interception,68.8,25.1,Lost In Play
+3754341,53,25,Interception,22.7,50.0,Won
+3754341,71,42,Interception,67.4,8.4,Lost In Play
+3754341,71,46,Tackle,70.0,3.7,Won
+3754341,75,31,Interception,17.3,26.5,Won
+3754341,80,20,Interception,92.9,16.3,Won
+3754341,82,53,Tackle,18.3,76.6,Lost Out
+3754228,1,57,Tackle,55.9,3.9,Success In Play
+3754228,7,13,Interception,79.3,4.1,Won
+3754228,17,42,Interception,45.1,18.7,Lost In Play
+3754228,23,58,Interception,35.9,64.8,Lost Out
+3754228,26,59,Interception,77.7,60.2,Lost In Play
+3754228,30,43,Interception,69.5,10.2,Won
+3754228,43,43,Interception,18.4,3.5,Won
+3754228,57,43,Tackle,34.0,40.9,Success In Play
+3754228,65,49,Tackle,74.7,58.3,Success In Play
+3754228,66,56,Interception,83.1,19.4,Success In Play
+3754228,68,9,Interception,13.4,45.9,Won
+3754290,0,58,Interception,74.0,27.1,Success In Play
+3754290,4,2,Interception,28.1,51.4,Won
+3754290,21,27,Tackle,34.1,36.5,Success In Play
+3754290,22,14,Tackle,21.1,67.4,Success In Play
+3754290,30,46,Tackle,32.5,58.8,Lost Out
+3754290,33,1,Tackle,27.5,61.8,Lost In Play
+3754290,33,10,Interception,32.5,59.0,Lost In Play
+3754290,38,5,Interception,27.5,24.5,Success In Play
+3754290,39,3,Interception,52.4,16.2,Lost Out
+3754290,47,21,Interception,27.6,24.6,Lost In Play
+3754290,52,46,Tackle,14.4,72.1,Success In Play
+3754290,64,35,Tackle,39.4,52.5,Success In Play
+3754290,73,40,Interception,37.3,19.5,Success In Play
+3754290,90,13,Tackle,12.2,74.6,Lost Out
+3754013,0,48,Tackle,57.0,17.9,Won
+3754013,2,18,Tackle,4.3,8.4,Won
+3754013,49,50,Tackle,81.2,26.1,Lost In Play
+3754013,51,48,Tackle,54.7,44.3,Won
+3754013,72,3,Tackle,43.8,31.3,Success In Play
+3754013,89,40,Tackle,49.5,73.5,Success In Play
+3754156,4,39,Tackle,62.5,24.1,Lost In Play
+3754156,39,39,Interception,39.3,65.0,Won
+3754156,60,37,Interception,57.2,41.2,Success In Play
+3754156,71,27,Interception,78.5,4.4,Lost In Play
+3754156,80,29,Tackle,25.1,29.9,Lost In Play
+3754156,81,30,Tackle,70.0,7.0,Success In Play
+3754156,86,48,Tackle,76.0,63.9,Lost In Play
+3754033,6,32,Tackle,26.8,22.9,Lost In Play
+3754033,11,8,Interception,58.7,70.4,Won
+3754033,24,3,Interception,54.7,3.4,Lost In Play
+3754033,33,23,Tackle,68.2,13.2,Success In Play
+3754033,46,17,Tackle,21.9,26.7,Lost In Play
+3754033,51,35,Tackle,77.0,29.0,Success In Play
+3754033,53,21,Interception,15.7,77.2,Lost Out
+3754033,53,38,Interception,10.1,72.9,Lost Out
+3754033,73,21,Tackle,14.1,73.5,Lost Out
+3754049,14,28,Tackle,41.1,73.8,Lost Out
+3754049,21,53,Interception,34.4,53.8,Won
+3754049,29,4,Tackle,21.7,54.7,Success In Play
+3754049,53,20,Tackle,29.0,44.5,Won
+3754049,64,9,Interception,55.3,44.6,Success In Play
+3754065,2,9,Tackle,43.5,55.5,Lost Out
+3754065,12,4,Interception,50.5,5.3,Won
+3754065,31,18,Tackle,33.0,10.0,Success In Play
+3754065,48,15,Interception,75.9,39.1,Lost In Play
+3754065,62,46,Tackle,65.2,42.4,Lost In Play
+3754065,66,15,Tackle,40.9,41.0,Success In Play
+3754065,91,37,Tackle,13.6,11.2,Lost In Play
+3754065,93,26,Interception,25.4,24.6,Won
+3754045,5,6,Tackle,54.9,4.3,Success In Play
+3754045,10,20,Tackle,2.7,15.8,Lost Out
+3754045,26,2,Tackle,25.3,57.4,Success In Play
+3754045,37,36,Interception,80.2,11.8,Lost In Play
+3754045,50,27,Interception,69.3,17.2,Success Out
+3754045,84,53,Tackle,54.3,20.9,Success In Play
+3754045,87,57,Interception,29.9,18.6,Won
+3754229,0,57,Interception,14.4,47.7,Success In Play
+3754229,2,43,Tackle,36.0,27.6,Success In Play
+3754229,8,42,Interception,57.1,31.9,Success In Play
+3754229,9,27,Interception,7.9,67.4,Success In Play
+3754229,28,46,Interception,29.2,19.7,Success In Play
+3754229,29,3,Interception,61.9,9.5,Lost In Play
+3754229,38,9,Tackle,9.3,55.5,Lost In Play
+3754229,38,17,Tackle,8.5,52.5,Success In Play
+3754229,42,53,Interception,17.6,4.2,Lost Out
+3754229,46,54,Tackle,79.3,76.7,Lost In Play
+3754229,49,31,Interception,41.8,69.0,Success In Play
+3754229,53,45,Tackle,71.6,76.7,Success In Play
+3754229,54,14,Tackle,84.8,64.0,Success In Play
+3754229,61,10,Interception,25.8,56.5,Won
+3754229,75,17,Interception,60.0,45.0,Won
+3754229,75,37,Tackle,56.7,69.2,Success In Play
+3754229,85,31,Interception,16.4,28.1,Won
+3754229,89,27,Tackle,90.9,46.6,Lost In Play
+3754229,92,21,Tackle,86.2,69.8,Success In Play
+3754166,0,37,Interception,65.7,71.2,Lost In Play
+3754166,3,23,Interception,49.2,11.6,Success In Play
+3754166,13,37,Tackle,23.2,11.4,Won
+3754166,15,26,Tackle,14.7,13.9,Won
+3754166,50,10,Tackle,28.1,33.0,Success In Play
+3754166,52,41,Interception,31.8,71.0,Success In Play
+3754166,62,17,Tackle,32.4,54.5,Success In Play
+3754023,1,28,Tackle,64.7,6.1,Lost In Play
+3754023,1,55,Tackle,35.6,3.4,Won
+3754023,2,15,Tackle,90.1,15.3,Success In Play
+3754023,15,43,Interception,107.5,73.9,Won
+3754023,23,5,Tackle,31.5,28.8,Success In Play
+3754023,43,37,Tackle,23.4,25.8,Success In Play
+3754023,78,50,Tackle,112.6,6.2,Won
+3754023,87,54,Tackle,56.4,42.2,Success In Play
+3754275,12,44,Interception,65.4,12.7,Success In Play
+3754275,45,42,Tackle,23.1,22.1,Success In Play
+3754275,61,0,Interception,30.4,72.9,Success In Play
+3754275,65,56,Interception,54.0,71.7,Won
+3754275,68,2,Interception,18.3,51.4,Won
+3754275,79,43,Interception,88.1,24.6,Won
+3754275,82,44,Interception,34.5,41.7,Won
+3754263,30,48,Tackle,22.4,5.7,Success In Play
+3754263,33,0,Interception,21.9,69.4,Lost In Play
+3754263,39,7,Interception,20.4,70.6,Won
+3754263,41,45,Tackle,47.1,54.1,Lost In Play
+3754263,41,47,Tackle,46.3,55.3,Success In Play
+3754263,61,50,Interception,34.9,8.9,Success In Play
+3754058,1,54,Tackle,41.1,69.9,Lost Out
+3754058,6,32,Tackle,36.4,14.7,Success In Play
+3754058,10,8,Interception,31.5,47.2,Success In Play
+3754058,24,41,Interception,55.9,13.6,Won
+3754058,43,19,Tackle,40.7,64.7,Success In Play
+3754058,84,51,Tackle,96.5,31.9,Success In Play
+3754146,22,33,Tackle,24.2,5.7,Lost Out
+3754146,23,4,Tackle,33.0,10.9,Won
+3754146,56,55,Tackle,88.6,48.3,Success In Play
+3754146,64,9,Tackle,65.3,32.9,Won
+3754146,66,55,Tackle,19.3,5.3,Success In Play
+3754146,70,38,Tackle,44.8,10.6,Won
+3754146,82,56,Interception,65.9,25.2,Won
+3754146,83,19,Interception,81.3,16.2,Won
+3754002,4,56,Tackle,56.5,22.8,Won
+3754002,45,56,Interception,24.0,13.3,Success In Play
+3754002,48,39,Tackle,25.7,55.0,Won
+3754002,52,32,Tackle,73.4,73.4,Won
+3754002,60,13,Tackle,21.8,66.5,Won
+3754002,74,12,Interception,61.3,19.7,Won
+3754002,85,27,Tackle,22.2,16.8,Success In Play
+3754106,70,17,Tackle,94.2,9.8,Success In Play
+3754106,73,17,Tackle,33.4,26.7,Success In Play
+3753987,78,10,Interception,95.5,41.9,Won
+3754203,72,24,Tackle,33.9,34.2,Success In Play
+3754203,76,6,Tackle,62.0,73.5,Won
+3754203,81,4,Tackle,14.3,58.3,Lost In Play
+3754261,3,19,Tackle,36.2,11.3,Won
+3754261,6,1,Tackle,35.9,31.1,Won
+3754261,21,20,Tackle,71.4,59.5,Success In Play
+3754261,21,26,Interception,81.3,67.4,Won
+3754261,28,27,Interception,65.9,24.5,Won
+3754261,28,42,Tackle,42.8,20.7,Success In Play
+3754261,29,49,Tackle,84.4,8.5,Success In Play
+3754261,34,35,Tackle,35.9,3.9,Lost In Play
+3754261,41,11,Interception,38.1,72.3,Won
+3754261,46,58,Tackle,52.9,50.0,Lost In Play
+3754261,74,18,Interception,56.7,65.6,Success In Play
+3754261,78,54,Interception,2.2,52.3,Lost In Play
+3754152,0,56,Tackle,85.1,37.1,Success In Play
+3754152,7,46,Tackle,23.6,18.4,Lost In Play
+3754152,13,19,Tackle,16.8,24.8,Success In Play
+3754152,19,57,Tackle,23.1,22.7,Won
+3754152,34,18,Tackle,52.7,21.0,Lost In Play
+3754152,45,6,Interception,55.6,70.6,Won
+3754152,47,3,Interception,80.8,35.9,Success In Play
+3754152,53,55,Interception,33.4,7.6,Won
+3754152,65,8,Interception,39.0,8.3,Success In Play
+3754152,69,59,Tackle,20.6,49.8,Won
+3754152,82,35,Interception,52.3,24.5,Lost In Play
+3754152,86,42,Tackle,26.8,30.3,Success In Play
+3754152,94,1,Tackle,29.6,3.1,Lost In Play
+3754186,10,29,Interception,14.9,49.0,Success In Play
+3754186,10,37,Tackle,55.8,76.2,Lost Out
+3754186,39,35,Tackle,18.4,1.5,Lost Out
+3754186,53,6,Interception,44.7,75.9,Won
+3754165,6,45,Interception,17.0,37.8,Won
+3754165,10,26,Tackle,40.6,54.2,Success In Play
+3754165,17,35,Tackle,30.2,18.5,Lost In Play
+3754165,36,20,Interception,54.9,42.0,Lost In Play
+3754165,60,39,Interception,13.3,35.8,Lost In Play
+3754165,67,34,Tackle,115.2,5.8,Lost Out
+3754165,74,34,Tackle,70.4,59.2,Success In Play
+3754165,91,13,Interception,22.9,52.7,Success In Play
+3754237,86,18,Interception,87.5,15.2,Won
+3754237,91,59,Tackle,36.2,71.1,Lost Out
+3753982,6,7,Interception,50.5,63.1,Won
+3753982,20,38,Tackle,2.5,71.8,Success Out
+3753982,25,4,Tackle,48.4,23.3,Lost In Play
+3753982,32,43,Interception,64.6,54.9,Lost Out
+3753982,33,30,Tackle,45.3,41.9,Lost In Play
+3753982,40,17,Tackle,72.9,4.5,Won
+3753982,48,33,Tackle,3.9,50.0,Won
+3753982,49,29,Tackle,34.1,69.5,Lost Out
+3753982,51,23,Interception,27.8,37.0,Won
+3753982,56,31,Tackle,17.8,14.9,Lost In Play
+3753982,60,16,Interception,74.2,40.9,Lost In Play
+3753982,70,47,Tackle,41.9,32.8,Lost In Play
+3753982,94,36,Interception,9.9,12.7,Lost In Play
+3754085,31,11,Tackle,48.2,15.4,Success In Play
+3754085,45,8,Tackle,29.8,26.1,Won
+3754085,49,21,Tackle,23.4,7.9,Lost Out
+3754085,69,57,Interception,43.8,64.4,Success In Play
+3754343,2,25,Tackle,56.8,18.9,Lost In Play
+3754343,8,14,Tackle,48.2,67.1,Lost In Play
+3754343,19,22,Tackle,85.9,72.6,Lost In Play
+3754343,24,34,Tackle,36.4,4.3,Won
+3754343,33,3,Tackle,25.3,49.9,Success In Play
+3754343,35,14,Tackle,14.4,74.9,Lost Out
+3754343,48,34,Interception,91.2,69.1,Won
+3754343,49,57,Tackle,13.7,68.7,Success In Play
+3754343,51,20,Interception,73.0,31.0,Won
+3754343,92,47,Tackle,71.1,59.8,Success Out
+3754181,7,21,Interception,8.4,65.9,Won
+3754181,28,36,Tackle,49.8,65.1,Lost In Play
+3754181,40,40,Interception,56.5,65.4,Success In Play
+3754181,60,22,Tackle,24.1,17.7,Won
+3754181,68,36,Interception,31.6,56.2,Won
+3754181,76,25,Interception,56.9,66.6,Won
+3754181,81,21,Tackle,43.9,75.4,Lost Out
+3754302,0,46,Tackle,22.4,45.1,Success In Play
+3754302,18,47,Interception,34.6,53.0,Lost Out
+3754302,25,15,Tackle,44.7,21.1,Won
+3754302,39,4,Tackle,21.3,53.2,Success In Play
+3754302,49,2,Tackle,88.3,22.7,Success In Play
+3754174,11,58,Tackle,10.4,24.4,Success In Play
+3754174,19,9,Tackle,62.5,69.6,Success In Play
+3754174,26,8,Tackle,50.8,33.0,Won
+3754174,55,7,Tackle,84.7,37.4,Lost In Play
+3754227,2,23,Tackle,64.0,16.3,Lost In Play
+3754227,20,6,Interception,81.1,56.6,Lost In Play
+3754227,23,30,Tackle,13.7,36.3,Success In Play
+3754227,51,44,Tackle,40.9,22.0,Won
+3754227,66,3,Tackle,93.7,52.7,Lost In Play
+3754227,73,19,Tackle,7.2,74.0,Lost Out
+3754227,84,56,Interception,22.6,26.2,Lost In Play
+3754227,85,4,Tackle,53.7,22.0,Success In Play
+3754335,5,37,Interception,51.9,20.1,Lost In Play
+3754335,84,10,Interception,40.0,3.1,Won
+3754289,0,52,Interception,64.6,3.9,Lost Out
+3754289,6,26,Interception,35.5,8.6,Lost In Play
+3754289,15,57,Interception,58.6,70.8,Won
+3754289,24,30,Tackle,30.1,70.5,Success Out
+3754289,25,8,Tackle,10.7,74.0,Won
+3754289,29,45,Interception,52.5,44.6,Lost In Play
+3754289,37,2,Tackle,83.9,60.7,Lost In Play
+3754289,37,21,Tackle,52.5,20.7,Lost In Play
+3754289,55,5,Interception,77.5,41.2,Success In Play
+3754289,75,22,Tackle,70.8,30.3,Success In Play
+3754211,0,20,Tackle,55.3,43.1,Lost In Play
+3754211,13,0,Tackle,50.2,11.3,Won
+3754211,13,30,Interception,68.5,24.3,Success In Play
+3754211,15,39,Tackle,78.9,61.9,Success In Play
+3754211,21,48,Tackle,71.6,55.2,Lost Out
+3754211,23,59,Tackle,46.4,29.1,Success In Play
+3754211,24,48,Interception,74.7,28.3,Won
+3754211,33,13,Tackle,46.4,45.3,Success In Play
+3754211,63,31,Tackle,63.4,9.1,Lost Out
+3754211,68,28,Tackle,51.6,37.5,Lost In Play
+3754211,68,56,Tackle,29.3,11.9,Won
+3754211,86,9,Interception,80.0,68.6,Success In Play
+3754250,46,13,Tackle,37.7,57.2,Lost In Play
+3754250,48,16,Interception,26.3,30.5,Success In Play
+3754250,59,4,Tackle,62.5,13.1,Lost In Play
+3754250,69,48,Interception,73.5,16.4,Won
+3754006,2,39,Tackle,21.0,65.2,Lost Out
+3754006,46,41,Tackle,70.9,56.2,Lost In Play
+3754006,51,7,Interception,5.0,12.4,Success In Play
+3754006,54,7,Tackle,24.8,55.7,Lost In Play
+3754006,66,41,Tackle,8.1,67.7,Won
