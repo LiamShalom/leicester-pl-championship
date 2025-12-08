@@ -96,10 +96,10 @@ leicester-pl-championship/
 
 ## 📊 Data Sources
 
-- Premier League historical data
-- Player statistics from the 2015-16 season
-- Match events and fixture data
-- Squad valuation data (2010-2020)
+- [StatsBomb](https://github.com/statsbomb/open-data)
+- [Premier League Stats](https://www.premierleague.com/stats)
+- [TransferMarkt](https://www.transfermarkt.com/)
+- [Fut.gg](https://www.fut.gg/playstyles/)
 
 ## 👥 Authors
 
